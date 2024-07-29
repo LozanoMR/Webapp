@@ -1,13 +1,13 @@
 {
-  "name": "devil",
-  "version": "2.0.0",
+  "name": "rat_server",
+  "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "engines": {
     "node": "16.13.2"
   },
   "scripts": {
-    "start": "npm start"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "l",

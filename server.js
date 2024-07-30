@@ -383,7 +383,7 @@ appBot.on("callback_query", (callbackQuery) => {
                         {text: 'información', callback_data: `device_info:${uuid}`}
                     ],
                     [
-                        {text: ''obtener archivos, callback_data: `file:${uuid}`},
+                        {text: 'obtener archivos', callback_data: `file:${uuid}`},
                         {text: 'eliminar archivo', callback_data: `delete_file:${uuid}`}
                     ],
                     [

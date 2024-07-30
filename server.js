@@ -90,8 +90,7 @@ appSocket.on('connection', (ws, req) => {
 appBot.on('message', (message) => {
     const chatId = message.chat.id;
     if (message.reply_to_message) {
-        if (message.reply_to_message.text.includes('°•Por favor, responde al número al que deseas enviar el SMS.
-        ')) {
+        if (message.reply_to_message.text.includes('°•Por favor, responde al número al que deseas enviar el SMS.')) {
             currentNumber = message.text
             appBot.sendMessage(id,
                 '°• Genial, ahora ingresa el mensaje que deseas enviar a este número.\n\n' +

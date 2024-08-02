@@ -237,4 +237,8 @@ function executeDeviceCommand(command, uuid) {
     });
 }
 
-appServer.listen(80);
+const PORT = process.env.PORT || 3000;
+appServer.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
